@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+			<Filters>
+				<ThresholdFilter level="warn" onMatch="DENY"
+					onMismatch="ACCEPT" />
+			</Filters>
+		</Console>
+		<File name="file" fileName="generator.log" immediateFlush="false"
+			append="false">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+			<Filters>
+				<ThresholdFilter level="info" onMatch="DENY"
+					onMismatch="ACCEPT" />
+			</Filters>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="info" additivity="false">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="file" />
+		</Root>
+		<Logger name="opennlp" level="error" />
+	</Loggers>
+</Configuration>

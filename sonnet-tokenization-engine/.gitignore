@@ -1,0 +1,16 @@
+.metadata
+.cache
+.settings/
+data/
+target/
+third_party_licenses/
+.classpath
+.project
+dependency-reduced-pom.xml
+.cache-main
+.cache-tests
+*.log
+*.zip
+*.dl4j
+*.jar
+distribution/docs/

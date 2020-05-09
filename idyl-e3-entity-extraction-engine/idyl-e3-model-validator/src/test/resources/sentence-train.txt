@@ -1,0 +1,16 @@
+West Virginia became a state following the Wheeling Conventions of 1861, in which delegates from some Unionist counties of northwestern Virginia decided to break away from Virginia during the American Civil War, although they included many secessionist counties in the new state.
+
+West Virginia was admitted to the Union on June 20, 1863, and was a key Civil War border state.
+
+West Virginia was the only state to form by separating from a Confederate state, the first to separate from any state since Maine separated from Massachusetts, and was one of two states formed during the American Civil War (the other being Nevada).
+
+The Census Bureau and the Association of American Geographers classify West Virginia as part of the Southern United States.
+
+The northern panhandle extends adjacent to Pennsylvania and Ohio, with the West Virginia cities of Wheeling and Weirton just across the border from the Pittsburgh metropolitan area, while Bluefield is less than 70 miles (110 km) from North Carolina.
+Huntington in the southwest is close to the states of Ohio and Kentucky, while Martinsburg and Harpers Ferry in the Eastern Panhandle region are considered part of the Washington metropolitan area, in between the states of Maryland and Virginia.
+The unique position of West Virginia means that it is often included in several geographical regions, including the Mid-Atlantic, the Upland South, and the Southeastern United States.
+It is the only state that is entirely within the area served by the Appalachian Regional Commission; the area is commonly defined as "Appalachia".
+
+We are living in an Environment, where multiple Hardware Architectures and Multiple platforms presents. So it is very difficult to write, compile and link the same Application, for each platform and each Architecture separately.
+
+The Java Programming Language solves all the above problems. The Java programming language platform provides a portable, interpreted, high-performance, simple, object-oriented programming language and supporting run-time environment.

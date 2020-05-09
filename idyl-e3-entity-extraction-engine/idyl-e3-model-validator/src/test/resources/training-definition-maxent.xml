@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trainingdefinition xmlns="http://www.mtnfog.com">
+	<algorithm name="maxent" cutoff="1" iterations="1" threads="1" />
+	<trainingdata file="/tmp/person-train.txt" format="opennlp" />
+	<model file="/tmp/model-out.bin" encryptionkey="enckey" language="en" type="person" />	
+	<features>
+		<generators>
+			<cache>
+				<generators>
+					<window prevLength="2" nextLength="2">
+						<tokenclass />
+					</window>
+					<window prevLength="2" nextLength="2">
+						<token />
+					</window>
+					<definition />
+					<prevmap />
+					<bigram />
+					<sentence begin="true" end="true" />
+				</generators>
+			</cache>
+		</generators>
+	</features>
+</trainingdefinition>
