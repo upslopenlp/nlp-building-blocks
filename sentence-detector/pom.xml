@@ -6,11 +6,11 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.2</version>
 	</parent>
-	<artifactId>prose</artifactId>
-	<groupId>com.mtnfog</groupId>
+	<artifactId>sentence-detector</artifactId>
+	<groupId>com.upslopenlp</groupId>
 	<packaging>pom</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>prose</name>
+	<name>sentence-detector</name>
 	<url>http://www.upslopenlp.com</url>
 	<description>Sentence detector breaks text into sentences.</description>
 	<inceptionYear>2017</inceptionYear>
@@ -26,9 +26,9 @@
 	<developers>
 		<developer>
 			<name>UpslopeNLP</name>
-			<email>support@mtnfog.com</email>
-			<organization>Mountain Fog</organization>
-			<organizationUrl>http://www.mtnfog.com</organizationUrl>
+			<email>hey@upslopenlp.com</email>
+			<organization>UpslopeNLP</organization>
+			<organizationUrl>http://www.upslope.com</organizationUrl>
 		</developer>
 	</developers>
 	<licenses>
