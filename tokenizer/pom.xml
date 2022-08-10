@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.2</version>
+	</parent>
+	<artifactId>tokenizer</artifactId>
+	<groupId>com.mtnfog</groupId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>tokenizer</name>
+	<url>http://www.mtnfog.com</url>
+	<description>tokenize input text.</description>
+	<inceptionYear>2017</inceptionYear>
+	<organization>
+		<name>Mountain Fog, Inc.</name>
+		<url>http://www.mtnfog.com</url>
+	</organization>
+	<scm>
+		<connection>scm:git@github.com:mtnfog/tokenizer-tokenization-engine.git</connection>
+		<developerConnection>scm:git@github.com:mtnfog/tokenizer-tokenization-engine.git</developerConnection>
+		<url>https://github.com/mtnfog/tokenizer-tokenization-engine</url>
+	</scm>
+	<developers>
+		<developer>
+			<name>Mountain Fog</name>
+			<email>support@mtnfog.com</email>
+			<organization>Mountain Fog</organization>
+			<organizationUrl>http://www.mtnfog.com</organizationUrl>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>Apache License, version 2</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+	<modules>
+		<module>tokenizer-app</module>
+		<module>tokenizer-model</module>
+		<module>tokenizer-api</module>
+		<module>tokenizer-services</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<commons.collections.version>4.4</commons.collections.version>
+		<mockito.version>4.6.1</mockito.version>
+		<opennlp.version>2.0.0</opennlp.version>
+		<spring.boot.version>2.7.2</spring.boot.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<target>11</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
