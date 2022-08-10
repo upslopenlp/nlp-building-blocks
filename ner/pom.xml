@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.2</version>
+	</parent>
+	<artifactId>ner</artifactId>
+	<groupId>com.mtnfog.idyl.e3</groupId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>ner</name>
+	<url>http://www.upslope.com</url>
+	<description>INER extracts entities from natural language text.</description>
+	<inceptionYear>2016</inceptionYear>
+	<organization>
+		<name>Mountain Fog, Inc.</name>
+		<url>http://www.mtnfog.com</url>
+	</organization>
+	<scm>
+		<connection>scm:git:ssh://git@bitbucket.org/mountainfog/ner.git</connection>
+		<developerConnection>scm:git:ssh://git@bitbucket.org/mountainfog/ner.git</developerConnection>
+		<url>https://bitbucket.org/mountainfog/ner.git</url>
+	</scm>
+	<developers>
+		<developer>
+			<name>Mountain Fog</name>
+			<email>support@mtnfog.com</email>
+			<organization>Mountain Fog</organization>
+			<organizationUrl>http://www.mtnfog.com</organizationUrl>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>Apache License, version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+	<modules>
+		<module>ner-app</module>
+		<module>ner-api</module>
+		<module>ner-services</module>
+		<module>ner-model</module>
+		<module>ner-system-initializer</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<properties>
+		<!-- Encodings -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<opennlp.version>2.0.0</opennlp.version>
+		<commons.cli.version>1.4</commons.cli.version>
+		<commons.collections.version>4.4</commons.collections.version>
+		<commons.compress.version>1.14</commons.compress.version>
+		<commons.configuration.version>2.1.1</commons.configuration.version>
+		<commons.fileupload.version>1.4</commons.fileupload.version>
+		<commons.io.version>2.6</commons.io.version>
+		<commons.lang.version>3.12.0</commons.lang.version>
+		<commons.math.version>3.6.1</commons.math.version>
+		<cuda.version>10.0</cuda.version>
+		<failsafe.version>2.22.1</failsafe.version>
+		<javax.annotation-api.version>1.3.2</javax.annotation-api.version>
+		<mockito.version>4.6.1</mockito.version>
+		<opennlp.version>2.0.0</opennlp.version>
+		<owner.version>1.0.10</owner.version>
+		<powermock.version>1.7.0</powermock.version>
+		<rest.assured.version>2.9.0</rest.assured.version>
+		<retrofit.version>2.3.0</retrofit.version>
+		<semver.java.version>0.1.0</semver.java.version>
+		<spring.boot.version>2.7.2</spring.boot.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<target>11</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
