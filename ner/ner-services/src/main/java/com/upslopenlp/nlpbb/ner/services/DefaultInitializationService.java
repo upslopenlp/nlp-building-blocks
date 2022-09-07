@@ -18,12 +18,10 @@ package com.upslopenlp.nlpbb.ner.services;
 import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,13 +31,6 @@ import opennlp.tools.namefind.TokenNameFinderModel;
 
 import com.upslopenlp.nlpbb.ner.model.services.SystemInitializerService;
 
-/**
- * Default implementation of {@link InitializationService} to configure
- * Idyl E3's {@link IdylPipeline pipeline}.
- * 
- * @author UpslopeNLP
- *
- */
 @Component
 public class DefaultInitializationService implements InitializationService {
 
@@ -108,7 +99,7 @@ public class DefaultInitializationService implements InitializationService {
 			if(CollectionUtils.isNotEmpty(modelManifests)) {
 			
 				for(ModelManifest modelManifest : modelManifests) {										
-					
+
 						StandardModelManifest standardModelManifest = (StandardModelManifest) modelManifest;
 													
 						// Load the token name finder model (entity model).
