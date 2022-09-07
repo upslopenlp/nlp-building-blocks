@@ -33,8 +33,8 @@
 		</license>
 	</licenses>
 	<properties>
-		<start-class>com.mtnfog.idyl.e3.IdylE3</start-class>
-		<mainClass>com.mtnfog.idyl.e3.IdylE3</mainClass>
+		<start-class>com.upslopenlp.nlpbb.ner.NER</start-class>
+		<mainClass>com.upslopenlp.nlpbb.ner.NER</mainClass>
 	</properties>
 	<build>
 		<finalName>ner</finalName>
