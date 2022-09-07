@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2018 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -18,7 +18,7 @@ package com.upslopenlp.nlpbb.tokenizer.model.exceptions;
 /**
  * This exception corresponds to HTTP error 500 Internal Server Error.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 public final class InternalServerErrorException extends RuntimeException {

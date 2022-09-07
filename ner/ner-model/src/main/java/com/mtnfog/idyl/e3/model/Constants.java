@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -20,7 +20,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * Various Idyl E3 constants.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 public class Constants { 

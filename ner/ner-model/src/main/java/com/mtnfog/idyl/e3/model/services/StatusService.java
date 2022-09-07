@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -20,7 +20,7 @@ import com.mtnfog.idyl.e3.model.Status;
 /**
  * Defines status, health, and metrics functions.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 public interface StatusService {

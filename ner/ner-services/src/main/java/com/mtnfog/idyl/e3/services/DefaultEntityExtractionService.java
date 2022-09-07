@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -25,7 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
-import com.mtnfog.idyl.e3.model.api.IdylE3EntityExtractionResponse;
+import com.mtnfog.idyl.e3.model.api.EntityExtractionResponse;
 import com.mtnfog.idyl.e3.model.exceptions.InternalServerErrorException;
 import com.mtnfog.idyl.e3.model.exceptions.ServiceUnavailableException;
 import com.mtnfog.idyl.e3.model.metrics.MetricReporter;
@@ -45,7 +45,7 @@ import com.neovisionaries.i18n.LanguageCode;
 /**
  * Default implementation of {@link EntityExtractionService}.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 @Component
@@ -66,8 +66,8 @@ public class DefaultEntityExtractionService implements EntityExtractionService {
 	private Environment env;
 
 	@Override
-	public IdylE3EntityExtractionResponse extract(String[] text, int confidence, String context,
-			String documentId, String language, String type, String sort) {
+	public EntityExtractionResponse extract(String[] text, int confidence, String context,
+											String documentId, String language, String type, String sort) {
 		
 		if(!initializer.isLoaded()) {
 			
@@ -105,7 +105,7 @@ public class DefaultEntityExtractionService implements EntityExtractionService {
 				.withDuplicateEntityStrategy(getDuplicateEntityHandlingStrategy())
 				.withLanguage(languageCode);
 		
-		IdylE3EntityExtractionResponse idylE3EntityExtractionResponse = null;
+		EntityExtractionResponse entityExtractionResponse = null;
 		
 		try {
 		
@@ -121,11 +121,11 @@ public class DefaultEntityExtractionService implements EntityExtractionService {
 				
 			}
 			
-			idylE3EntityExtractionResponse = new IdylE3EntityExtractionResponse(entities, extractionTime);
+			entityExtractionResponse = new EntityExtractionResponse(entities, extractionTime);
 			
 			// Add the value to the rolling average.
-			metricReporter.logEntityExtractionTime(idylE3EntityExtractionResponse.getExtractionTime());
-			metricReporter.report(MetricReporter.MEASUREMENT_EXTRACTION, "entityExtractionTime", idylE3EntityExtractionResponse.getExtractionTime(), Unit.MILLISECONDS);
+			metricReporter.logEntityExtractionTime(entityExtractionResponse.getExtractionTime());
+			metricReporter.report(MetricReporter.MEASUREMENT_EXTRACTION, "entityExtractionTime", entityExtractionResponse.getExtractionTime(), Unit.MILLISECONDS);
 			
 		} catch (Exception ex) {
 			
@@ -135,7 +135,7 @@ public class DefaultEntityExtractionService implements EntityExtractionService {
 			
 		}
 
-		return idylE3EntityExtractionResponse;
+		return entityExtractionResponse;
 				
 	}
 	

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -17,12 +17,12 @@ package com.mtnfog.idyl.e3.model.annotators;
 
 import org.apache.commons.collections4.multimap.UnmodifiableMultiValuedMap;
 
-import ai.idylnlp.model.entity.Entity;
+import com.mtnfog.idyl.e3.model.Entity;
 
 /**
  * Annotate the input text with the entities.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 @FunctionalInterface

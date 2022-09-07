@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -15,14 +15,12 @@
  ******************************************************************************/
 package com.mtnfog.idyl.e3.model.sanitizers;
 
-import java.util.Set;
-
-import ai.idylnlp.model.entity.Entity;
+import com.mtnfog.idyl.e3.model.Entity;
 
 /**
  * Sanitizes the entities in the input text.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 public interface Sanitizer {

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -55,7 +55,7 @@ import opennlp.tools.namefind.TokenNameFinderModel;
  * Default implementation of {@link InitializationService} to configure
  * Idyl E3's {@link IdylPipeline pipeline}.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 @Component

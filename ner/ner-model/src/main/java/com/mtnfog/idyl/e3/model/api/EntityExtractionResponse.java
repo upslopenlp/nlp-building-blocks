@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -17,15 +17,15 @@ package com.mtnfog.idyl.e3.model.api;
 
 import java.util.Set;
 
-import ai.idylnlp.model.entity.Entity;
+import com.mtnfog.idyl.e3.model.Entity;
 
 /**
  * A response to an entity extraction request.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
-public class IdylE3EntityExtractionResponse {
+public class EntityExtractionResponse {
 	
 	private Set<Entity> entities;
 	private long extractionTime;
@@ -35,7 +35,7 @@ public class IdylE3EntityExtractionResponse {
 	 * @param entities A collection of {@link Entity} objects.
 	 * @param extractionTime The extraction time in milliseconds.
 	 */
-	public IdylE3EntityExtractionResponse(Set<Entity> entities, long extractionTime) {
+	public EntityExtractionResponse(Set<Entity> entities, long extractionTime) {
 		
 		this.entities = entities;	
 		this.extractionTime = extractionTime;

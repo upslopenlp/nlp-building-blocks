@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -21,7 +21,7 @@ import com.mtnfog.idyl.e3.model.Constants;
  * Parameters used when extracting entities from text
  * in an uploaded file.
  * 
- * @author Mountain Fog, Inc.
+ * @author UpslopeNLP
  *
  */
 public class FileExtractionParameters {

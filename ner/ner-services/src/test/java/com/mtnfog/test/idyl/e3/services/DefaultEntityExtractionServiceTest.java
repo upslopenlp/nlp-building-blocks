@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -32,7 +32,7 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import com.google.gson.Gson;
 import ai.idylnlp.model.entity.Entity;
 import com.mtnfog.idyl.e3.model.Constants;
-import com.mtnfog.idyl.e3.model.api.IdylE3EntityExtractionResponse;
+import com.mtnfog.idyl.e3.model.api.EntityExtractionResponse;
 import com.mtnfog.idyl.e3.model.exceptions.BadRequestException;
 import com.mtnfog.idyl.e3.model.services.EntityExtractionService;
 import com.mtnfog.idyl.e3.services.DefaultInitializationService;
@@ -71,7 +71,8 @@ public class DefaultEntityExtractionServiceTest {
 		String language = LanguageCode.en.getAlpha3().toString();
 		String type = null;
 		
-		IdylE3EntityExtractionResponse response = entityExtractionService.extract(text, confidence, context, documentId, language, type, Constants.DEFAULT_SORT);
+		EntityExtractionResponse
+            response = entityExtractionService.extract(text, confidence, context, documentId, language, type, Constants.DEFAULT_SORT);
 
 		for(Entity entity : response.getEntities()) {
 			LOGGER.info("Extracted entity: {}", entity.toString());
@@ -95,7 +96,8 @@ public class DefaultEntityExtractionServiceTest {
 		// Null language means use all languages.
 		String language = null;
 
-		IdylE3EntityExtractionResponse response = entityExtractionService.extract(text, confidence, context, documentId, language, type, Constants.DEFAULT_SORT);
+		EntityExtractionResponse
+            response = entityExtractionService.extract(text, confidence, context, documentId, language, type, Constants.DEFAULT_SORT);
 
 		for(Entity entity : response.getEntities()) {
 			LOGGER.info("Extracted entity: {}", entity.toString());
@@ -130,7 +132,8 @@ public class DefaultEntityExtractionServiceTest {
 		String language = LanguageCode.en.getAlpha3().toString();
 		String type = null;
 		
-		IdylE3EntityExtractionResponse response = entityExtractionService.extract(text, confidence, context, documentId, language, type, Constants.DEFAULT_SORT);
+		EntityExtractionResponse
+            response = entityExtractionService.extract(text, confidence, context, documentId, language, type, Constants.DEFAULT_SORT);
 
 		assertEquals(1, response.getEntities().size());
 		

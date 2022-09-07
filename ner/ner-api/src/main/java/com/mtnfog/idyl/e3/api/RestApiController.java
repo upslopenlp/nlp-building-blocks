@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2019 Mountain Fog, Inc.
+ * Copyright 2022 UpslopeNLP
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License.  You may obtain a copy
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import com.mtnfog.idyl.e3.model.Constants;
 import com.mtnfog.idyl.e3.model.Status;
-import com.mtnfog.idyl.e3.model.api.IdylE3EntityExtractionResponse;
+import com.mtnfog.idyl.e3.model.api.EntityExtractionResponse;
 import com.mtnfog.idyl.e3.model.services.EntityExtractionService;
 import com.mtnfog.idyl.e3.model.services.StatusService;
 
@@ -49,7 +49,7 @@ public class RestApiController {
 	@ResponseBody
 	@RequestMapping(value = "/api/extract", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	@ResponseStatus(HttpStatus.OK)	
-	public IdylE3EntityExtractionResponse extract(
+	public EntityExtractionResponse extract(
 			@RequestParam(value = "confidence", required = false, defaultValue = Constants.DEFAULT_CONFIDENCE_THRESHOLD) int confidence,
 			@RequestParam(value = "context", required = false, defaultValue = Constants.DEFAULT_CONTEXT) String context,
 			@RequestParam(value = "documentid", required = false, defaultValue = Constants.DEFAULT_DOCUMENT_ID) String documentId,
