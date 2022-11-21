@@ -13,48 +13,43 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.upslopenlp.nlpbb.ner.system.initializer;
+package com.upslopenlp.nlpbb.ner.model.services;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
-import com.upslopenlp.nlpbb.ner.model.Backend;
-import com.upslopenlp.nlpbb.ner.model.services.SystemInitializerService;
+import com.neovisionaries.i18n.LanguageCode;
+import com.upslopenlp.nlpbb.ner.model.Entity;
 
 /**
- * Initializes a CPU system.
+ * Default implementation of {@link EntityExtractionService}.
  * 
  * @author UpslopeNLP
  *
  */
 @Component
-public class NativeSystemInitializerService implements SystemInitializerService {
+public class DefaultEntityExtractionService implements EntityExtractionService {
 
-	private static final Logger LOGGER = LogManager.getLogger(NativeSystemInitializerService.class);
-	
-	@Override
-	public void initialize() {
-		
-		LOGGER.info("Initializing native system with {} logical thread(s).", getProcessors());
-		
-	}
+	private static final Logger LOGGER = LogManager.getLogger(DefaultEntityExtractionService.class);		
 
-	/**	
-	 * {@inheritDoc}
-	 * This will give you the number of logical threads. 
-	 * If you have hyper-threading on, this will be double the number of cores.
-	 */
+	@Autowired
+	private Environment env;
+
 	@Override
-	public int getProcessors() {
-		
-		return Runtime.getRuntime().availableProcessors();
-		
-	}
-	
-	@Override
-	public Backend getBackend() {
-		return Backend.NATIVE;
+	public Set<Entity> extract(String[] text, String type, LanguageCode languageCode) {
+
+		// TODO: Get the model for the language.
+
+		final Set<Entity> entities = new HashSet<>();
+
+		return entities;
+				
 	}
 
 }

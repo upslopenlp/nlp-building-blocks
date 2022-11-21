@@ -8,17 +8,15 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>ner</artifactId>
-	<groupId>com.upslopenlp.idyl.e3</groupId>
+	<groupId>com.upslopenlp.nlpbb.ner</groupId>
 	<packaging>pom</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>ner</name>
 	<url>http://www.upslope.com</url>
-	<description>INER extracts entities from natural language text.</description>
+	<description>NER extracts entities from natural language text.</description>
 	<modules>
 		<module>ner-app</module>
 		<module>ner-api</module>
-		<module>ner-services</module>
 		<module>ner-model</module>
-		<module>ner-system-initializer</module>
 	</modules>
 </project>

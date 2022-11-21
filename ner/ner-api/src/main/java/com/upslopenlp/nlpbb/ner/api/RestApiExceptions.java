@@ -27,8 +27,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.upslopenlp.nlpbb.ner.model.exceptions.BadRequestException;
 import com.upslopenlp.nlpbb.ner.model.exceptions.InternalServerErrorException;
-import com.upslopenlp.nlpbb.ner.model.exceptions.ServiceUnavailableException;
-import com.upslopenlp.nlpbb.ner.model.exceptions.UnauthorizedException;
 
 @ControllerAdvice
 public class RestApiExceptions {
@@ -50,21 +48,7 @@ public class RestApiExceptions {
 		LOGGER.error(message, ex);
 		return new String(message);
 	}
-	
-	@ResponseBody
-	@ExceptionHandler({UnauthorizedException.class})
-	@ResponseStatus(value = HttpStatus.UNAUTHORIZED)
-	public String handleUnauthorizedException(UnauthorizedException ex) {
-	    return new String(ex.getMessage());
-	}
 
-	@ResponseBody
-	@ExceptionHandler(ServiceUnavailableException.class)
-	@ResponseStatus(value = HttpStatus.SERVICE_UNAVAILABLE)
-	public String handleServiceUnavailableException(ServiceUnavailableException ex) {
-	    return new String(ex.getMessage());
-	}
-	
 	@ResponseBody
 	@ExceptionHandler(InternalServerErrorException.class)
 	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)

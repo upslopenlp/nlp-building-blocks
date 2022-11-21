@@ -19,7 +19,7 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.upslopenlp.idyl.e3</groupId>
+		<groupId>com.upslopenlp.nlpbb.ner</groupId>
 		<version>1.0.0-SNAPSHOT</version>
 		<artifactId>ner</artifactId>
 	</parent>
@@ -38,26 +38,6 @@
 	</properties>
 	<build>
 		<finalName>ner</finalName>
-		<resources>
-			<resource>
-				<filtering>true</filtering>
-				<directory>${basedir}/src/main/resources</directory>
-			</resource>
-			<resource>
-				<filtering>true</filtering>
-				<directory>${project.basedir}/files</directory>
-				<targetPath>${project.build.directory}</targetPath>
-				<includes>
-					<include>README.txt</include>
-				</includes>
-			</resource>
-		</resources>
-		<testResources>
-			<testResource>
-				<directory>${basedir}/src/test/resources</directory>
-				<filtering>true</filtering>
-			</testResource>
-		</testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -71,58 +51,11 @@
 					<layout>ZIP</layout>
 				</configuration>
 			</plugin>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>generate-sources</id>
-						<phase>generate-sources</phase>
-						<configuration>
-							<tasks>
-								<mkdir dir="target/models" />
-								<mkdir dir="target/plugins" />
-							</tasks>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-resource-two</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/models/</outputDirectory>
-							<resources>
-								<resource>
-									<directory>${basedir}/../distribution/models/</directory>
-									<filtering>false</filtering>
-									<includes>
-										<include>*.*</include>
-									</includes>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>com.upslopenlp.idyl.e3</groupId>
-			<artifactId>ner-services</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.upslopenlp.idyl.e3</groupId>
+			<groupId>com.upslopenlp.nlpbb.ner</groupId>
 			<artifactId>ner-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>

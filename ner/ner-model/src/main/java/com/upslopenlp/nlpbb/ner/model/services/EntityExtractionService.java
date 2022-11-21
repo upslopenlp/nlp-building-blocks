@@ -15,8 +15,10 @@
  ******************************************************************************/
 package com.upslopenlp.nlpbb.ner.model.services;
 
+import java.util.Set;
+
 import com.neovisionaries.i18n.LanguageCode;
-import com.upslopenlp.nlpbb.ner.model.api.EntityExtractionResponse;
+import com.upslopenlp.nlpbb.ner.model.Entity;
 
 /**
  * Provides entity extraction capabilities.
@@ -26,19 +28,6 @@ import com.upslopenlp.nlpbb.ner.model.api.EntityExtractionResponse;
  */
 public interface EntityExtractionService {
 
-	/**
-	 * Extracts entities from the text.
-	 * @param text The text.
-	 * @param confidence The confidence threshold.
-	 * @param context The context.
-	 * @param documentId The document ID.
-	 * @param language The language of the source document, or <code>auto</code> if unknown.
-	 * @param type The type of entity to extract.
-	 * @param languageCode The language code to extract.
-	 * @return An {@link EntityExtractionResponse}.
-	 */
-	EntityExtractionResponse extract(String[] text, int confidence,
-                                     String context, String documentId, String language, String type,
-									 LanguageCode languageCode);
+	Set<Entity> extract(String[] text, String type, LanguageCode languageCode);
 				
 }
