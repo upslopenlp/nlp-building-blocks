@@ -17,7 +17,6 @@ package com.upslopenlp.nlpbb.ner;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
@@ -30,7 +29,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
-import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication(exclude = {
@@ -47,12 +45,7 @@ public class NER extends SpringBootServletInitializer {
 	
 	private static final Logger LOGGER = LogManager.getLogger(NER.class);
 	
-	@Autowired
-	private Environment env;
-	
 	public static void main(String[] args) throws Exception {
-						
-		LOGGER.info("Starting Idyl E3.");
 		
 		SpringApplication.run(NER.class, args);
 		
