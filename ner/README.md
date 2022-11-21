@@ -6,4 +6,4 @@
 
 The response:
 
-`{"entities":[{"text":"George Washington","confidence":0.96,"span":{"tokenStart":0,"tokenEnd":2},"type":"person","languageCode":"eng","extractionDate":1512511318007,"metadata":{"x-model-filename":"mtnfog-en-person.bin"}}],"extractionTime":2}`
+`{"entities":[{"text":"George Washington","confidence":0.96,"span":{"tokenStart":0,"tokenEnd":2},"type":"person","languageCode":"eng","extractionDate":1512511318007,"metadata":{"x-model-filename":"upslopenlp-en-person.bin"}}],"extractionTime":2}`

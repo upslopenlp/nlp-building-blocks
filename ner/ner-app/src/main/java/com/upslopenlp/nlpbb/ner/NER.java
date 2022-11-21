@@ -36,9 +36,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import com.mtnfog.idyl.e3.metrics.MetricUtils;
-import com.mtnfog.idyl.e3.stats.ConsoleStatsReporter;
-import com.mtnfog.idyl.e3.stats.GraphiteStatsReporter;
+import com.upslopenlp.idyl.e3.metrics.MetricUtils;
+import com.upslopenlp.idyl.e3.stats.ConsoleStatsReporter;
+import com.upslopenlp.idyl.e3.stats.GraphiteStatsReporter;
 
 import ai.idylnlp.model.nlp.ConfidenceFilter;
 import ai.idylnlp.model.stats.StatsReporter;

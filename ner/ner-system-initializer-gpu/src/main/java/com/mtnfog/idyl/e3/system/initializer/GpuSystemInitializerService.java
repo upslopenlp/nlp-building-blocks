@@ -13,15 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.mtnfog.idyl.e3.system.initializer;
+package com.upslopenlp.idyl.e3.system.initializer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.nd4j.jita.conf.CudaEnvironment;
 import org.springframework.stereotype.Component;
 
-import com.mtnfog.idyl.e3.model.Backend;
-import com.mtnfog.idyl.e3.model.services.SystemInitializerService;
+import com.upslopenlp.idyl.e3.model.Backend;
+import com.upslopenlp.idyl.e3.model.services.SystemInitializerService;
 
 /**
  * Initializes a GPU system.
